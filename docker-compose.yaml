@@ -1,0 +1,10 @@
+version: "3"
+services:
+  nodecg:
+    build: .
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./:/nodecg/bundles/raid-rta-layouts
+      - ./cfg:/nodecg/cfg
+      - ./db:/nodecg/db

@@ -1,0 +1,44 @@
+{
+  "name": "raid-rta-layouts",
+  "version": "0.0.0",
+  "description": "NodeCG bundle for Raid RTA Marathon",
+  "homepage": "",
+  "author": {
+    "name": "Cma",
+    "email": "chicchaima@gmail.com",
+    "url": ""
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "node.js",
+    "nodecg",
+    "react",
+    "nodecg-bundle"
+  ],
+  "nodecg": {
+    "compatibleRange": "^1.1.1",
+    "dashboardPanels": [
+      {
+        "name": "panel",
+        "title": "Panel",
+        "width": 2,
+        "file": "panel.html",
+        "headerColor": "#9146FF"
+      }
+    ],
+    "graphics": [
+      {
+        "file": "index.html",
+        "width": 1920,
+        "height": 1080
+      }
+    ]
+  },
+  "repository": "https://github.com/cma2819/raid-rta-layouts.git",
+  "license": "MIT"
+}

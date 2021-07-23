@@ -4,6 +4,6 @@ bower_components
 
 /cfg
 /db
-/dashboard
-/extension
-/graphics
+# /dashboard
+# /extension
+# /graphics

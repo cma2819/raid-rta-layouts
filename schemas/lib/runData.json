@@ -1,0 +1,21 @@
+{
+    "$schema":"http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "uuid": { "type": "string" },
+        "game": { "type": "string" },
+        "category": { "type": "string" },
+        "estimate": { "type": "string" },
+        "estimateInSeconds": { "type": "number" },
+        "player": { "$ref": "player.json" }
+    },
+    "required": [
+        "uuid",
+        "game",
+        "category",
+        "estimate",
+        "estimateInSeconds",
+        "player"
+    ]
+}

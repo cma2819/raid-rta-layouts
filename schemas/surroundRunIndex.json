@@ -1,0 +1,40 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "properties": {
+        "prev": {
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "current": {
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "next": {
+            "oneOf": [
+                {
+                    "type": "string",
+                    "format": "uuid"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        }
+    },
+    "required": ["prev", "current", "next"]
+}

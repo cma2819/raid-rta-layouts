@@ -1,0 +1,18 @@
+@import './fonts/styles.css';
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: 'NewRodinPro';
+    color: #f0f0f0;
+    text-shadow: 0px 2px 8px black;
+    font-size: 38px;
+}
+
+.strong {
+    font-size: 1.2em;
+}
+
+.sub {
+    font-size: 0.7em;
+}

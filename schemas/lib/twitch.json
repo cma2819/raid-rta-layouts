@@ -1,0 +1,17 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "id": {"type": "string"},
+        "displayName": { "type": "string" },
+        "login": { "type": "string" },
+        "profileImageUrl": { "type": "string" }
+    },
+    "required": [
+        "id",
+        "displayName",
+        "login",
+        "profileImageUrl"
+    ]
+}

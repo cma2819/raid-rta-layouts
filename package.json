@@ -20,6 +20,15 @@
     "react",
     "nodecg-bundle"
   ],
+  "scripts": {
+    "autofix": "run-s autofix:*",
+    "autofix:browser": "eslint --fix --ext .ts,.tsx src/browser",
+    "autofix:extension": "eslint --fix --ext .ts src/extension",
+    "build": "webpack",
+    "dev": "webpack --watch --mode=development",
+    "schema-types": "nodecg schema-types -o src/nodecg/generated schemas",
+    "schema-types:lib": "nodecg schema-types -o src/nodecg/generated/lib schemas/lib"
+  },
   "nodecg": {
     "compatibleRange": "^1.1.1",
     "dashboardPanels": [
@@ -27,8 +36,36 @@
         "name": "panel",
         "title": "Panel",
         "width": 2,
-        "file": "panel.html",
+        "file": "index.html",
+        "headerColor": "#9146FF",
+        "workspace": "Configuration"
+      },
+      {
+        "name": "run-current-control",
+        "title": "現在のゲーム",
+        "width": 4,
+        "file": "currentControl.html",
         "headerColor": "#9146FF"
+      },
+      {
+        "name": "run-data-control",
+        "title": "走者情報",
+        "width": 4,
+        "file": "runDataControl.html",
+        "headerColor": "#9146FF"
+      },
+      {
+        "name": "run-import",
+        "title": "RunData Import",
+        "width": 6,
+        "file": "importDialog.html",
+        "dialog": true,
+        "dialogButtons": [
+          {
+            "name": "import",
+            "type": "confirm"
+          }
+        ]
       }
     ],
     "graphics": [
@@ -40,5 +77,50 @@
     ]
   },
   "repository": "https://github.com/cma2819/raid-rta-layouts.git",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@material-ui/core": "^4.12.2",
+    "@material-ui/icons": "^4.11.2",
+    "axios": "^0.21.1",
+    "globby": "^11.0.3",
+    "googleapis": "^82.0.0",
+    "lodash.clone": "^4.5.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-transition-group": "^4.4.2",
+    "styled-components": "^5.3.0",
+    "twitch": "^4.5.5",
+    "twitch-auth": "^4.5.5",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/globby": "^9.1.0",
+    "@types/html-webpack-plugin": "^3.2.5",
+    "@types/lodash.clone": "^4.5.6",
+    "@types/node": "^15.6.2",
+    "@types/react": "^17.0.9",
+    "@types/react-dom": "^17.0.6",
+    "@types/react-transition-group": "^4.4.2",
+    "@types/styled-components": "^5.1.11",
+    "@types/uuid": "^8.3.1",
+    "@types/webpack-merge": "^5.0.0",
+    "@types/webpack-node-externals": "^2.5.1",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "css-loader": "^6.2.0",
+    "eslint": "^7.27.0",
+    "eslint-plugin-import": "^2.23.4",
+    "html-webpack-plugin": "^5.3.1",
+    "nodecg-cli": "^7.0.0",
+    "style-loader": "^3.2.1",
+    "ts-loader": "^9.2.3",
+    "ts-node": "^10.0.0",
+    "ts-nodecg": "^0.3.1",
+    "typescript": "^4.3.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "webpack-merge": "^5.8.0",
+    "webpack-node-externals": "^3.0.0"
+  }
 }

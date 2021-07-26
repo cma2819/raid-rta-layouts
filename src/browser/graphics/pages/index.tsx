@@ -41,7 +41,7 @@ const App = () => {
       <SurroundCurrentProvider>
         <Container>
           <GameContainer>
-            <PlayingGame heightPx={990} />
+            <PlayingGame />
           </GameContainer>
           <InfoBarContainer>
             <InfoBar />

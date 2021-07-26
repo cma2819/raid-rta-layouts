@@ -7,54 +7,37 @@ type Props = {
 };
 
 const Container = styled.div`
-  position: relative;
-  height: 100%;
-`;
-
-const Border = styled.div`
-  width: 24px;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
-  position: absolute;
-  left: 24px;
-  z-index: 1;
-`;
-
-const Overlay = styled.div`
-  position: absolute;
-  z-index: 2;
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
+display: flex;
+flex-direction: row;
+height: 100%;
+width: 100%;
+background: linear-gradient(to right, transparent, transparent 24px, rgba(255, 255, 255, 0.2) 24px, rgba(255, 255, 255, 0.2) 48px, transparent 48px);
 `;
 
 const Label = styled.div`
   margin-left: 32px;
   align-self: flex-start;
+  white-space: nowrap;
 `;
 
 const Info = styled.div`
   align-self: flex-end;
   flex-grow: 9;
   text-align: center;
+  white-space: nowrap;
+  padding: 0 0.5em;
 `;
 
 export const BaseInfo = ({label, children}: Props) => {
   return (
     <React.Fragment>
       <Container>
-        <Border />
-        <Overlay>
-          <Label className="sub">
-            { label }
-          </Label>
-          <Info>
-            { children }
-          </Info>
-        </Overlay>
+        <Label className="sub">
+          { label }
+        </Label>
+        <Info>
+          { children }
+        </Info>
       </Container>
     </React.Fragment>
   )

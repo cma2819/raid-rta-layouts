@@ -33,7 +33,8 @@ export const InfoBar = () => {
 
     const intervalId = window.setInterval(() => {
       const length = next ? 3 : 2;
-      setInfoIndex((refInfoIndex.current + 1) % length);
+      // setInfoIndex((refInfoIndex.current + 1) % length);
+      setInfoIndex(0);
       
     }, CHANGE_INTERVAL_SEC * 1000);
 

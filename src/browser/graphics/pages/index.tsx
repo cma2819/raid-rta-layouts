@@ -24,7 +24,7 @@ const GameContainer = styled.div`
   top: 0;
   left: 0;
   width: 165px;
-  height: 1080px;
+  height: 990px;
 `;
 
 const InfoBarContainer = styled.div`
@@ -41,7 +41,7 @@ const App = () => {
       <SurroundCurrentProvider>
         <Container>
           <GameContainer>
-            <PlayingGame game="ドンキーコング６４" />
+            <PlayingGame />
           </GameContainer>
           <InfoBarContainer>
             <InfoBar />

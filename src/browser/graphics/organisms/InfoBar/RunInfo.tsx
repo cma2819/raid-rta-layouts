@@ -5,12 +5,11 @@ import { CategoryInfo } from '../../organisms/InfoWithLabel/CategoryInfo';
 import { EstimateInfo } from '../../organisms/InfoWithLabel/EstimateInfo';
 
 const CategoryArea = styled.div`
-  width: 55%;
   height: 100%;
+  flex-grow: 1;
 `;
 
 const EstimateArea = styled.div`
-  width: 30%;
   height: 100%;
 `;
 
